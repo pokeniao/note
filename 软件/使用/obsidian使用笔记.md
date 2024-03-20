@@ -132,8 +132,11 @@ tags:
 	- 使用方法obsidian://advanced-uri? 开头
 	- 参数`vault=` obsidian仓库名，`filepath=` 仓库下的路径名
 6. Hover Editor: 双链预览功能
-7. File Cleaner :清理没有引用的资源(如:图片)
-8. Excalidraw: 流程图
-9. github publisher : [[git]]提交
-10. Dataview:  内部数据库查询
-11. Calendar: 日记周记
+7. ==templater==：模板
+8. kanban: 看板
+9. Thino: 可以用于随手记录
+10. File Cleaner :清理没有引用的资源(如:图片)
+11. Excalidraw: 流程图
+12. [[git]] : [[git]]推送
+13. Dataview:  内部数据库查询
+14. Calendar: 日記周记

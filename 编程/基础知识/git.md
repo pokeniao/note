@@ -1,19 +1,17 @@
 ---
 日期: 2024-03-17
-tags: []
+tags:
+  - 快速开始
 ---
 # 基础指令使用
 
 1. 构建本地仓库： git init
-2. 添加到暂存区： git add `.`
-3. 从暂存区中移除：git rm `.gitignore`
-4. 提交到本地仓库：git commit -m `描述信息`
-5. 查看上传版本的信息：
+2. 1. 查看上传版本的信息：
 	- git log
 	- git reflog (精简的)
-6. 回退版本： git reset --hard `版本id`
-7. 查看当前的状态：git status
-8. 分支
+2. 回退版本： git reset --hard `版本id`
+3. 查看当前的状态：git status
+4. 分支
 	1. 查看分支 git branch -v
 	2. 创建分支 git branch `分支名`
 	3. 切换分支 
@@ -23,20 +21,27 @@ tags: []
 	5. 删除分支 
 		- git branch -d `分支名`（需要检查）
 		- git branch -D `分支名`（强制删除）
-- 远程库
 
+- **暂存区**
+	1. 添加到暂存区： git add `.`
+	2. 从暂存区和工作区中移除：git rm `.删除内容`
+	3. 从暂存区中移除：git rm --cached `.删除内容`
+	4. *暂存区替换工作区（危险）：* git checkout `.`
+- **本地仓库**
+	1. 获取本地仓库到暂存区：git reset HEAD
+	2. 提交到本地仓库：git commit -m `描述信息`
+- **远程库**
+	- ***添加远程库***
 	1. 添加远程库: git remote add `定义仓库名可以为gitee或githup（一般默认origin）` `仓库地址`[^仓库地址为]
 	2. 查看绑定远程库：git remote show 或 git remote -v
-
-[^仓库地址为]: http https://gitee.com/a1625229957/car-care.git 或ssh方式 git@gitee.com:a1625229957/note.git。http方式需要登入，ssh不需要登入，但要绑定ssh [[#关联远程仓库账号]]
-
-- 远程操作
-	1. 从远程库抓取到本地：git fetch `远程仓库名` `分支名` 如果不指定远程名和分支，则抓取所有
-	2. 从远程库抓取并合并到本地：git pull `远程仓库名` `分支名` 
-	3. 推送到远程：git push -u `远程仓库名gitee或githup(一般默认origin)` `分支` 
+	- ***操作远程库***
+	1. 从远程库抓取到本地：git fetch `远程仓库名` `分支名` 如果不指定远程名和分支，则抓取所有		1. 从远程库抓取并合并到本地：git pull `远程仓库名` `分支名` 
+	2. 推送到远程：git push -u `远程仓库名gitee或githup(一般默认origin)` `分支` 
 		(-u上传并结合）
 		强制推送：git push -u `远程仓库名gitee或githup(一般默认origin)` `分支`  --force
-	4. 克隆：git clone `仓库路径` `本地目录`
+	3. 克隆：git clone `仓库路径` `本地目录`
+
+[^仓库地址为]: http https://gitee.com/a1625229957/car-care.git 或ssh方式 git@gitee.com:a1625229957/note.git。http方式需要登入，ssh不需要登入，但要绑定ssh [[#关联远程仓库账号]]
 # 分支冲突
 原因：上传到远程时，`merge`合并分支时同一个文件位置（行）有2中不同的更改，git不能判断，需要我们手动解决。
 
