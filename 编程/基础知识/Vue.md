@@ -94,5 +94,41 @@ onUnmounted(() => {
 
 *删除*：
 1. 使用 `splice(index, count)` 删除,从索引为 index 的位置开始，删除 count 个元素
-2. `pop()`：删除并返回数组的==最后一个元素==。
+2. `pop()`：删除并返回数组的==最后一个元素==。 ^b3c853
 3.  `shift()`：删除并返回数组的==第一个元素==。
+*包含：*
+1. `includes(数组名)`：判断是否包含数组，包含返回true,不包含返回false
+
+
+# 前端展示后端发来的html
+## 利用 v-html
+**缺点**：如果包含js代码则不能执行，是静态的
+```vue
+<template>
+  <div>
+    <!-- 使用 v-html 渲染 HTML 内容 -->
+    <div v-html="htmlContent"></div>
+  </div>
+</template>
+<script>  
+export default defineComponent({  
+setup() {  
+//用于存储后端返回的表单内容  
+const formContent =ref('11');  
+const buyMethod = () => {  
+	formContent.value="<h1>Hello, World!</h1>";  
+	}  
+return {formContent};  
+},  
+});  
+</script>
+```
+## 利用document.write()
+**缺点**：它会直接写入到文档流中，可能会覆盖当前页面的内容，可能会清除当前页面的内容，而且在加载期间页面会出现空白。但会执行其中的js代码
+**==使用场景**： 支付宝支付，后端返回给前端的页面==
+```js
+const responseHtml = resp.data.content;
+document.open();
+document.write(responseHtml);
+document.close();
+```
