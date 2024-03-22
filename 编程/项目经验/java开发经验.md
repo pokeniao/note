@@ -57,7 +57,8 @@ LocalDateTime currentTime = LocalDateTime.now();
 	- 加：LocalDateTime newTime = currentTime.plusMinutes(15);
 	- 减：LocalDateTime pastTime = currentTime.minusMinutes(15);
 3. **比较时间**
->==当前时间==大于==过去时间==15分钟 **或** ==过去时间==大于==当前时间==15分钟： currentTime.isAfter(pastTime.plusMinutes(15)）
+>==当前时间==大于==过去时间==+15分钟
+>currentTime.isAfter(pastTime.plusMinutes(15)）
 
 | 方法                                                   | 说明             |
 | ---------------------------------------------------- | -------------- |
