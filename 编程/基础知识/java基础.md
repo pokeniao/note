@@ -17,5 +17,5 @@ tags:
 	}
 	new Cat().start();
 	```
-	2. class实现Runnable接口，实现run方法，new Thread(class)
+	2. class实现Runnable接口，实现run方法，new Thread(class).start()运行
 ## 线程的使用
