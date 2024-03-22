@@ -91,7 +91,7 @@ rocketMQTemplate.convertAndSend(`主题` ,`消息`)
 **异步消息**
 	异步消息无返回值，需要传入回调类。无需等待消息是否发送成功。
 
-```java
+```java fold:代码
 @Resource  
 private RocketMQTemplate rocketMQTemplate;
 /**

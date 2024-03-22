@@ -27,7 +27,7 @@ aliases:
 **使用**：
 1. `import axios from 'axios'`
 2. axios.post(`路径`,` {参数}或ref` ,`添加消息头(可选)`) .then(resp=>{回调}).catch(error => {错误回调})
-3. axios拦截器：[[Util#Axios拦截器]]
+3. axios拦截器：[[封装工具类#Axios拦截器]]
 
 # 路由
 **创建路由**：
@@ -83,7 +83,7 @@ createApp(App).use(router)
 ```
 ^20a2b6
 
-**路由拦截器**：[[Util#路由拦截器]]
+**路由拦截器**：[[封装工具类#路由拦截器]]
 
 
 # 添加监听器

@@ -1,8 +1,8 @@
 ---
 日期: 2024-03-18
 tags:
-  - 资源搜索
-aliases: []
+  - 信息
+aliases:
 ---
 # 找开源项目的一些途径  
 • https://github.com/trending/  
