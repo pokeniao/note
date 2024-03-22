@@ -146,7 +146,22 @@ private RocketMQTemplate rocketMQTemplate;
 	topic, MessageBuilder.withPayload(message).build(), 
 	timeout, delayLevel);
 	}
+	/**
+	*异步延迟消息
+	*/
+	public void asyncSendDelay(String topic, Object message, long timeout, int delayLevel) 
+	{ 
+	rocketMQTemplate.asyncSend(topic, MessageBuilder.withPayload(message).build(), 
+	new SendCallback() { 
+		@Override public void onSuccess(SendResult sendResult) 
+		{ log.info("异步发送延时消息成功"); }
+		 @Override public void onException(Throwable throwable) 
+		 { log.error("异步发送延时消息发生异常"); } 
+	 }, 
+	 timeout, delayLevel); 
+	}
 
+  
   
 ```
 
