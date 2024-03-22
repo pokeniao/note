@@ -3,7 +3,14 @@
 tags:
   - 基本概念
 ---
-
+# Vue的组成结构
+[[Pasted image 20240322180819.png]]
+main.js是项目入口
+```js
+import App from './App.vue'
+createApp(App).mount('#app')
+```
+绑定了组件入口`App.vue` 和 显示页面index.html`<div id="app"></div>`
 # setup和methods
 1. setup中定义的是==响应式数据、方法==,需要return出去。而methods不需要
 >`setup`函数中直接修改`_servicesType`的值，那么在模板中使用该值的地方将会自动更新。
@@ -36,3 +43,12 @@ setup(props, { emit }) { // 在这里直接使用 emit 方法 }
 这是 JavaScript 中的扩展运算符，使用 `...` 运算符==可以将**数组**或**类数组对象**展开为一系列元素==
 >举个例子，假设 `products.value` 是 `[1, 2, 3]`，`newProducts` 是 `[4, 5, 6]`。如果我们直接使用 `products.value.concat(newProducts)`，得到的结果将是 `[1, 2, 3, [4, 5, 6]]`，这是一个嵌套的数组。但是，如果我们使用 `[...products.value, ...newProducts]`，得到的结果将是 `[1, 2, 3, 4, 5, 6]`，这是一个扁平的数组，其中包含了所有的元素。
 >因此，使用 `...` 运算符可以帮助我们更方便地合并数组，并确保得到的结果是一个扁平的数组。
+
+# \<router-view\> 组件
+ **\<router-view :key="isRouterActive"/\>**
+组件在==接收到新的键（key）时==，会认为这是一个==不同的组件实例，从而导致重新渲染==。  
+，因为正常情况下，在同一个路由下切换，并不会重新渲染组件。 ^caed2f
+
+作用案例：[[前端开发经验#不白屏刷新方法|不白屏刷新方法]] 
+
+

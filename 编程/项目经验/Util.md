@@ -1,0 +1,116 @@
+---
+日期: 2024-03-22
+aliases:
+  - 自定义工具类
+  - 通用代码
+tags:
+  - 封装工具类
+---
+# 后端
+
+# 前端
+## Axios拦截器
+ ```js fold:main.js
+ axios.interceptors.request.use(  
+	function (config) {  
+		console.log("请求参数：", config);  
+		const token = store.state.member.token || store.state.manager.token;  
+		if (token) {  
+		//将jwt加入axios请求头
+		config.headers.jwt_token = token;  
+		console.log("头携带参数：", config);  
+		}  
+	return config;  
+	}, error => {  
+		console.log("请求参数：", error);  
+		return Promise.reject(error)  
+	}  
+)  
+axios.interceptors.response.use(  
+	function (config) {  
+		console.log("返回结果：", config);  
+		return config;  
+	}, error => {  
+		console.log("返回结果：", error);  
+		const state = error.response.status;  
+		if (state === 401) {  
+			console.log("登入失效，请重新登入");  
+			//将Member清空  
+			store.commit("setMember",{});  
+			router.push("/login");  
+		}  
+	return Promise.reject(error)  
+	}  
+)
+ ```
+
+## Axios请求URL前缀
+```js fold:main.js
+//设置axios请求前缀  
+axios.defaults.baseURL = process.env.VUE_APP_POKENIAO
+```
+在[[Vue#生产环境配置|生产环境配置]]里面可以设置你的服务器地址
+## 路由拦截器
+```js fold:路由拦截器
+//路由拦截器, beforeEach跳转之前 to是从那来， from是到哪去，next是是否放行  
+router.beforeEach((to, from, next) => {  
+	//路由进来获取路由中设置的meta值，可以进行判断
+	if (to.meta.loginNeed) {  
+		//具体逻辑
+		if ("判断token等") {  
+			//指定跳转路径
+			next('/login');  
+		} else {  
+			//当前跳转路径
+			next();  
+		}  
+	} else {  
+		//不需要登入  
+		next();  
+	}  
+})
+```
+
+```js fold:示例
+//路由拦截器, beforeEach跳转之前 to是从那来， from是到哪去，next是是否放行  
+router.beforeEach((to, from, next) => {  
+	//路由进来获取路由中设置的meta值，可以进行判断
+	if (to.meta.loginNeed) {  
+		//具体逻辑
+		const _member = store.state.member;  
+		//最好用jwt校验，前端不会弄jwt  
+		if (!_member.token) {  
+			console.log("未登入或超时")  
+			//跳转到login页面  
+			next('/login');  
+		} else {  
+			next();  
+		}  
+	}  
+	//比较校验修改密码页面  
+	else if (to.meta.mobileNeed) {  
+		if (!sessionStorage.getItem('mobile')) {  
+			//跳转到forgetpassword页面  
+			next('/forget');  
+		} else {  
+			next();  
+		}  
+	} 
+	else if (to.meta.loginManagerNeed) {  
+		const _manager = store.state.manager;  
+		//最好用jwt校验，前端不会弄jwt  
+		if (!_manager.token) {  
+			console.log("未登入或超时")  
+			//跳转到login页面  
+			next('/login');  
+		} else {  
+			next();  
+		}  
+	} 
+	else {  
+		//不需要登入  
+		next();  
+	}  
+})
+```
+
