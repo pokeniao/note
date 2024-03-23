@@ -16,7 +16,7 @@ $ cd rocketmq-all-5.2.0-source-release/
 64位操作系统，推荐 Linux/Unix/macOS
 使用环境： jdk8+
 
-[[RocketMq报错|MQBUG我遇到的Bug]]!!!!
+[[RocketMq报错BUG|MQBUG我遇到的Bug]]!!!!
 # 配置
 1. 运行内存占用空间：`rocketmqe\bin\runbroker.sh` 
 ```sh
@@ -168,7 +168,7 @@ private RocketMQTemplate rocketMQTemplate;
 ```
 
 ## 接收者
-[[RocketMq报错#^1821fd|主题分组Bug]]
+[[RocketMq报错BUG#^1821fd|主题分组Bug]]
 ```java
 @Service  
 @RocketMQMessageListener(consumerGroup = "分组名",topic = "主题名")  
