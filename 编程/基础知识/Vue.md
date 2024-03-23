@@ -122,8 +122,9 @@ onUnmounted(() => {
 1. `includes(数组名)`：判断是否包含数组，包含返回true,不包含返回false
 
 **给数组中的{ }添加字段**
->[ { key: '2', value: 'bar' }, { key: '3', value: 'baz' }, { key: '1', value: 'foo' }]中插入成
->[ { key: '2', value: 'bar'，name: 'pzg' }, { key: '3', value: 'baz' }, { key: '1', value: 'foo' }]
+>`[ { key: '2', value: 'bar' }, { key: '3', value: 'baz' }, { key: '1', value: 'foo' }]`中插入成
+>`[ { key: '2', value: 'bar'，name: 'pzg' }, { key: '3', value: 'baz' }, { key: '1', value: 'foo' }]`
+
 
 
 
