@@ -5,7 +5,7 @@ tags:
 aliases:
   - 后端开发
 ---
-# 复制类
+# 复制类(类复制)
 ```java
 BeanUtils.copyProperties(复制对象,目标对象);
 ```

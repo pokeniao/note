@@ -131,7 +131,9 @@ onUnmounted(() => {
 >`[ { key: '2', value: 'bar'，name: 'pzg' }, { key: '3', value: 'baz' }, { key: '1', value: 'foo' }]`
 
 如：==array.value\[0\].name='pzg'== 
-如果是`array=ref[[],[],[]]
+如果是`array=ref([{},{},{}],[],[]])` 数组内还有数组的话 array.value\[0\]\[1\].name='pzg'
+
+**[[前端开发经验#判断ref数组是是否为null|判断数组是否为null]]**
 
 
 # 生产环境配置
