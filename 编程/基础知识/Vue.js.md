@@ -4,6 +4,7 @@ tags:
   - 快速开始
 aliases:
   - 前端开发
+  - js
 ---
 环境准备：Node.js[Node.js下载安装及环境配置教程](https://blog.csdn.net/WHF__/article/details/129362462)
 查看版本：`node -v` `npm -v`
@@ -22,6 +23,10 @@ aliases:
 	8. (是否保存预算) `Yes` or `NO` ->
 	9. (项目名) `输入项目名` 
 **运行**：npm run serve
+
+# 前端js类型转换
+1. 转成Interger `parseInt(类型)`
+2. String\*25会制动转换成Number类型
 # axios使用
 **前置**：`npm install axios`
 **使用**：
@@ -125,7 +130,8 @@ onUnmounted(() => {
 >array=ref(`[ { key: '2', value: 'bar' }, { key: '3', value: 'baz' }, { key: '1', value: 'foo' }]`  )中插入成
 >`[ { key: '2', value: 'bar'，name: 'pzg' }, { key: '3', value: 'baz' }, { key: '1', value: 'foo' }]`
 
-如：==array.value\[0\].name='pzg'==
+如：==array.value\[0\].name='pzg'== 
+如果是`array=ref[[],[],[]]
 
 
 # 生产环境配置
