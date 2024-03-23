@@ -76,6 +76,9 @@ LocalDateTime currentTime = LocalDateTime.now();
 *Date转LocalDateTime*:
 >LocalDateTime createDateTime = LocalDateTime.ofInstant(ticket.getCreateDate().toInstant(), ZoneId.systemDefault());
 
+*LocalDateTime转Date*
+>Date date = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+
 > [!Tip]- 解释
 > Instant 时间戳: 它可以精确到纳秒级别，并且不依赖于时区。
 
