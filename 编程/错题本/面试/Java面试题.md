@@ -78,5 +78,5 @@ ArrayList使用无参构造器时，初始化elementDate容量为0，第一次�
 Vector 初始化为10，默认2倍扩容。指定大小后，默认指定大小，后续2倍扩容
 
 LinkedList底层维护了一个双向链表，维护了一个==first==和==last==分别指向==首节点==和==尾节点==，
-每个节点中维护了`prev` `next` `item` 三个属性，prev指向前一个，next指向下一个
+==每个节点==中维护了`prev` `next` `item` 三个属性，prev指向前一个，next指向下一个最终实现双向链表。
 
