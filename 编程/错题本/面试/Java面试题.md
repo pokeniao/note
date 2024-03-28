@@ -65,5 +65,18 @@ hashcode是更具==对象内存地址==换算出来的一个值。
 # 13.常用集合类有哪些
 ==Map接口和Collection接口==（可来tion）是所有集合框架的父接口。
 1.Collection接口的子接口有：Set接口，List接口等
-	1.Set接口的实现类有：TreeSet,HashSet,LinkedHashSet等
-	2.List接口的实现类有：ArrayList,LinkedList,
+	1.Set接口的实现类有：`TreeSet`，`HashSet`，`LinkedHashSet`等
+	2.List接口的实现类有：`ArrayList`，`LinkedList`，`Vector`(外科特)
+2.Map接口的实现类有：`HashMap` ，`ConcurrentHashMap`(肯car润)，`TreeMap` ，`HashTable`，`properties` 等
+# 14.ArrayList和LinkedList的区别
+ArrayList，Vector：中维护了一个被==transient(串西恩)修饰==的一个Object类型的==elementDate数组==，不被序列化。
+LinedList:维护的是一个==双向循环列表==和==双向队列==。
+
+## ArrayList，Vector，LinkedList底层数据结构
+ArrayList使用无参构造器时，初始化elementDate容量为0，第一次扩容==默认扩容至10==个大小，再次扩容==为1.5倍==。==指定大小==的情况下，初始直接==默认初始化为指定大小==，之后1.5倍扩容。
+
+Vector 初始化为10，默认2倍扩容。指定大小后，默认指定大小，后续2倍扩容
+
+LinkedList底层维护了一个双向链表，维护了一个==first==和==last==分别指向==首节点==和==尾节点==，
+每个节点中维护了`prev` `next` `item` 三个属性，prev指向前一个，next指向下一个
+
