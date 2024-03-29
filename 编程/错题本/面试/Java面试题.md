@@ -164,4 +164,31 @@ JRE 是 ==Java 运⾏时环境==，包括了 ==Java 虚拟机==）和 ==Java 标
 
 # 29.final ,finally,finalize的区别
 
-final
+[[Java面试题#5.final有什么用？|final]]
+finally 一般作用于try-catch的代码块中，无论是否有异常都会执行
+finalize是一个方法，一般==由垃圾回收器来调用==，进行垃圾回收对象==是否可回收的最后判断==
+
+# 30. String,StringBuffer,StringBuider的区别
+1. String是只读的字符串，每次对==String操作都会生成一个新的对象==，从==底层看是一个final char数组==
+2. StringBuffer和StringBuider是==可变的字符串数组==，不过==StringBuffer是线程安全==，==StringBuider是线程不安全的==
+# 31.反射的定义
+在java中==只要给定类的名字==，就可以通过反射机制得==到类的所有信息==。
+# 32.equals和\==的区别
+\==是比较==地址是否相同==，即指向的是否是同一个对象
+equals==默认是比较地址==，我们可以==重写来让他比较值是否相同==，比如String，Interger默认是重写了equals方法比较值是否相同
+
+# 33.线程和程序和进程的概念
+1. ==进程==是程序的==一次执行过程==，是==系统运行程序的基本单位==
+2. ==程序==是指，存储在==磁盘中的数据和指令文件==
+3. 线程是指,==比进程更小的单位==，==一个进程中可以有多个线程==
+# 34.浅拷贝和深拷贝
+1. 浅拷贝：是指==增加了一个指针指向==了已存在的==内存地址==
+2. 深拷贝：==增加一个指针==指向了==一个新开辟的内存==
+# 35.集合底层数据结构（HashSet,LinkedHashSet,TreeSet,HashMap的数据结构）
+[[Java面试题#ArrayList，Vector，LinkedList底层数据结构]]
+
+1. HashSet 是基于HashMap实现，底层采用HashMap
+2. LinkedHashSet继承于HashSet，内部采用LinkedHashMap来实现
+3. TreeSet是由红黑树来实现
+4. HashMap是由数组+链表+红黑树来实现
+
