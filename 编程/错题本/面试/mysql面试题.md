@@ -55,7 +55,9 @@ tags:
 	2.readview,来读取版本，最小活跃id，最大id，当前id来判断，按照这个规则读到的是同一个规则，就解决了不可重复读的问题
 # 7.MySQL ⽇志有了解过吗？
 Mysql日志分为
-bin log，redo log，undo log
-1. binlog是MySQL的二进制日志文件，用于记录MySQL服务器上的==所有更新==和==修改操作==,等==逻辑操作⽇志==。binlog是==在事务提交后⽣成==的，因此==可以⽤于恢复数据库==。
-2. redolog==⽤于恢复数据==，保证数据的⼀致性和持久性。当 MySQL发⽣修改时，redolog 会将这些操作记录下来，并写⼊磁盘。当 MySQL ==发⽣宕机或崩溃==时，通过==重放 redolog 就可以恢复数据==
-3. undolog⽤于回滚操作。当 ==MySQL 发⽣事务回滚时==，undolog会记录这些操作并将其写⼊磁盘。这样，当 MySQL 需要回滚时，通过重放 undolog 就可以回滚事务。
+bin log(属于MySQL 服务层内置日志),redo log，undo log（两者属于InnoDB引擎层的日志）
+1. binlog （二进制日志）即存档⽇志，是 Server 层⽣成的的⽇志，主要⽤于数据备份和主从复制；
+2. redolog（重做⽇志），是 Innodb 存储引擎层的⽇志，==在数据库崩溃时==，通过==重放Redo Log==中的操作，==将数据库恢复到崩溃前的状态==；
+3. undolog（回滚⽇志），是 Innodb 存储引擎层的⽇志，⽤于==数据库事故故障恢复，回滚==；
+
+# 
