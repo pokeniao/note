@@ -188,4 +188,4 @@ Create Table table_Name
 	long_query_time=2
 	```
 	3. 查看日志文件位置：Linux`/var/lib/mysql/localhost-slow.log`
-	4. 
+3. 
