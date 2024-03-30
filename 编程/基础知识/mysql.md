@@ -163,17 +163,29 @@ Create Table table_Name
 
 
 # 索引
-创建索引
+1. 创建索引
 `Create [unique|fulltext] index 索引名 on 表（索引字段,...）`
->unique：是唯一索引
->fulltext：是全局索引
->
-
-
-
+>*unique*：是唯一索引
+>*fulltext*：是全局索引
+>*不加*：是常规索引
+>如果关联了单个字段为==单列索引==，关联了多个字段为==联合索引==
+2. 查看索引 `Show index from 表`
+3. 删除索引 `drop index 索引名 on 表名`
 
 
 索引[[mysql底层进阶#索引]]
 
 
-
+# 优化
+1. 查看数据库SQL的执行频率`show global status like 'Com_______'`
+2. 慢查询日志：
+	1. 查看慢查询是否开启：`show variables like 'slow_querly_log'`
+	2. 开启慢查询： 在MYSQL配置文件（/etc/my.cnf）加入
+	```
+	#开启慢查询
+	slow_query_log=1
+	#默认慢查询时间改为了2s
+	long_query_time=2
+	```
+	3. 查看日志文件位置：Linux`/var/lib/mysql/localhost-slow.log`
+	4. 
