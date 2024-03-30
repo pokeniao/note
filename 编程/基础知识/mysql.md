@@ -163,18 +163,17 @@ Create Table table_Name
 
 
 # 索引
+创建索引
+`Create [unique|fulltext] index 索引名 on 表（索引字段,...）`
+>unique：是唯一索引
+>fulltext：是全局索引
+>
+
+
+
+
+
 索引[[mysql底层进阶#索引]]
 
-**索引的分类**
 
-| 分类   | 特点  | 关键字      |
-| ---- | --- | -------- |
-| 主键索引 | 1个  | primary  |
-| 唯一索引 | 多个  | unique   |
-| 常规索引 | 多个  |          |
-| 全文索引 | 多个  | fulltext |
-
-索引存储形式：（Innodb）
-聚集索引:
-二级索引:
 
