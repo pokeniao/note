@@ -46,7 +46,7 @@ tags: [excalidraw]
 {
 	"type": "excalidraw",
 	"version": 2,
-	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.0.25",
+	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.1.1",
 	"elements": [
 		{
 			"type": "rectangle",
@@ -116,8 +116,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "uJ3c3in2_KCAOHXfJ_HKO",
 			"originalText": "队列",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "ellipse",
@@ -187,8 +186,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "dkbwpu_cJ5PVCg1ATd54M",
 			"originalText": "生产者",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "ellipse",
@@ -262,8 +260,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "5mRz8_Y222-ADclwA30tG",
 			"originalText": "消费者",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "diamond",
@@ -337,8 +334,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "pK_Fw11PC8EHgdL90-9v7",
 			"originalText": "消息",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "diamond",
@@ -408,8 +404,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "P2up8GQhf5rRIwv6NZKz0",
 			"originalText": "消息",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "arrow",
@@ -457,8 +452,8 @@ tags: [excalidraw]
 		},
 		{
 			"type": "arrow",
-			"version": 201,
-			"versionNonce": 1462728631,
+			"version": 205,
+			"versionNonce": 1735253245,
 			"isDeleted": false,
 			"id": "LDVZZ-LRmatjZuV0S4PvR",
 			"fillStyle": "solid",
@@ -480,7 +475,7 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1711033754989,
+			"updated": 1712090426328,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -541,8 +536,7 @@ tags: [excalidraw]
 			"verticalAlign": "top",
 			"containerId": null,
 			"originalText": "先进先出",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "text",
@@ -578,8 +572,7 @@ tags: [excalidraw]
 			"verticalAlign": "top",
 			"containerId": null,
 			"originalText": "限流削峰",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "ellipse",
@@ -649,8 +642,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "u8c3pr68OdZAZUOaBdQGh",
 			"originalText": "生产者",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "arrow",
@@ -768,13 +760,12 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "j5Y0EjX7W_QYyHo0nlDv1",
 			"originalText": "队列",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "arrow",
-			"version": 24,
-			"versionNonce": 401959127,
+			"version": 25,
+			"versionNonce": 922957149,
 			"isDeleted": false,
 			"id": "V_FsMIRYr-fQ5P3GCJMtP",
 			"fillStyle": "solid",
@@ -796,7 +787,7 @@ tags: [excalidraw]
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1711033754993,
+			"updated": 1712090426329,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -887,13 +878,12 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "ZjT0Zj-WNO94TBQexhueI",
 			"originalText": "消费者",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "text",
-			"version": 4,
-			"versionNonce": 1191157849,
+			"version": 5,
+			"versionNonce": 789479869,
 			"isDeleted": false,
 			"id": "QvA3CItR",
 			"fillStyle": "solid",
@@ -913,7 +903,7 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1711026392461,
+			"updated": 1712090426418,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -924,13 +914,12 @@ tags: [excalidraw]
 			"verticalAlign": "top",
 			"containerId": null,
 			"originalText": "200",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "text",
-			"version": 5,
-			"versionNonce": 716306551,
+			"version": 6,
+			"versionNonce": 1885422739,
 			"isDeleted": false,
 			"id": "PiNrnSAY",
 			"fillStyle": "solid",
@@ -950,7 +939,7 @@ tags: [excalidraw]
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1711026400613,
+			"updated": 1712090426418,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -961,8 +950,7 @@ tags: [excalidraw]
 			"verticalAlign": "top",
 			"containerId": null,
 			"originalText": "500、",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "text",
@@ -1003,8 +991,7 @@ tags: [excalidraw]
 			"verticalAlign": "top",
 			"containerId": null,
 			"originalText": "异步解耦",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "ellipse",
@@ -1074,8 +1061,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "iGCnGRAc-ZV_iU2WW-VAA",
 			"originalText": "生产者",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "arrow",
@@ -1237,8 +1223,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "2jYcy8ORlwOzk-qyJ7CQ1",
 			"originalText": "队列",
-			"lineHeight": 1.25,
-			"baseline": 18
+			"lineHeight": 1.25
 		},
 		{
 			"type": "arrow",
@@ -1352,41 +1337,7 @@ tags: [excalidraw]
 			"verticalAlign": "middle",
 			"containerId": "nyzEmKVIEp0urlRPxlh2s",
 			"originalText": "消费者",
-			"lineHeight": 1.25,
-			"baseline": 18
-		},
-		{
-			"type": "image",
-			"version": 2,
-			"versionNonce": 1234567641,
-			"isDeleted": true,
-			"id": "TMRIn6yZ",
-			"fillStyle": "hachure",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -388.5529947147948,
-			"y": -601.8137079761102,
-			"strokeColor": "transparent",
-			"backgroundColor": "transparent",
-			"width": 500,
-			"height": 5,
-			"seed": 6615,
-			"groupIds": [],
-			"frameId": null,
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1711033756916,
-			"link": null,
-			"locked": false,
-			"status": "pending",
-			"fileId": "04f88502f210b79b317d93554fe8dd452381e377",
-			"scale": [
-				1,
-				1
-			]
+			"lineHeight": 1.25
 		}
 	],
 	"appState": {
@@ -1404,10 +1355,10 @@ tags: [excalidraw]
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 572.7530069218261,
-		"scrollY": 634.3060528939063,
+		"scrollX": 525.2679219865876,
+		"scrollY": 587.775995842438,
 		"zoom": {
-			"value": 1
+			"value": 0.9500000000000001
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,

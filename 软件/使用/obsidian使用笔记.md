@@ -137,6 +137,7 @@ tags:
 9. Thino: 可以用于随手记录
 10. File Cleaner :清理没有引用的资源(如:图片)
 11. Excalidraw: 流程图
-12. [[git]] : [[git]]推送
-13. Dataview:  内部数据库查询
-14. Calendar: 日記周记
+12. surfing:浏览器内打开页面
+13. [[git]] : [[git]]推送
+14. Dataview:  内部数据库查询
+15. Calendar: 日記周记
