@@ -70,8 +70,8 @@ tags:
 
 # 插件
 
-1. ==主题== ：AnuPpuccin
-2. ==Style setting==: 样式设置 
+1. ==主题== ：**AnuPpuccin**
+2. ==**Style setting**==: 样式设置 
 	css样式：（在设置Style setting中进行import）
 ```css fold:CSS代码
 {
@@ -124,15 +124,15 @@ tags:
   "anuppuccin-theme-settings@@anp-header-color-toggle": true
 }
 ```
-3. ==Code Style== : 根好代码块
+3. **==Code Style**== : 根好代码块
 	- `fold` 折叠
 	- `title=""` `title:""` `fold:` `fold:""` `fold=""`设置名字
-4. ==Various Complements==: 自动补全,英语补全
-5. ==Advanced URI:== 链接加强
+4. ==**Various Complements**==: 自动补全,英语补全
+5. ==**Advanced URI**:== 链接加强
 	- 使用方法obsidian://advanced-uri? 开头
 	- 参数`vault=` obsidian仓库名，`filepath=` 仓库下的路径名
-6. Hover Editor: 双链预览功能
-7. ==templater==：模板
+6. **Hover Editor**: 双链预览功能
+7. ==**templater**==：模板
 8. kanban: 看板
 9. Thino: 可以用于随手记录
 10. File Cleaner :清理没有引用的资源(如:图片)
