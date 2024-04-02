@@ -189,6 +189,9 @@ Create Table table_Name
 	```
 	3. 查看日志文件位置：Linux`/var/lib/mysql/localhost-slow.log`
 3.  **explain查询计划**
-	-  explain查询后的表属性
-		1. 执行顺序（ID）：得到的表id值越大，越先执行
-		2.  连接类型(type) ：性能由好到坏NULL,system,const(*主键或唯一索引*),eq_ref,ref（*非唯一索引*）,range,index,all（*全表扫描*）
+> [!NOTE]- explain表字段含义
+>1. 执行顺序（ID）：得到的表id值越大，越先执行
+>2.  连接类型(type) ：性能由好到坏NULL,system,const(*主键或唯一索引*),eq_ref,ref（*非唯一索引*）,range,index,all（*全表扫描*）
+>3. possible_keys，key，key_len : `possible_key` 预计使用的索引，`key` 使用的索引，`key_len` 索引的长度
+
+	
