@@ -177,8 +177,8 @@ Create Table table_Name
 
 
 # 优化
-1. 查看数据库SQL的执行频率`show global status like 'Com_______'`
-2. 慢查询日志：
+1. 查看数据库**SQL的执行频率**`show global status like 'Com_______'`
+2. **慢查询日志**：
 	1. 查看慢查询是否开启：`show variables like 'slow_querly_log'`
 	2. 开启慢查询： 在MYSQL配置文件（/etc/my.cnf）加入
 	```
@@ -188,4 +188,7 @@ Create Table table_Name
 	long_query_time=2
 	```
 	3. 查看日志文件位置：Linux`/var/lib/mysql/localhost-slow.log`
-3. 
+3.  **explain查询计划**
+	-  explain查询后的表属性
+		1. 执行顺序（ID）：得到的表id值越大，越先执行
+		2.  连接类型(type) ：性能由好到坏NULL,system,const(*主键或唯一索引*),eq_ref,ref（*非唯一索引*）,range,index,all（*全表扫描*）
