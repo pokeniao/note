@@ -172,10 +172,13 @@ Create Table table_Name
 2. 查看索引 `Show index from 表`
 3. 删除索引 `drop index 索引名 on 表名`
 
-
 索引[[mysql底层进阶#索引]]
 
-
+## SQL提示
+SQL提示是优化数据库的重要手段。用于提示Mysql使用的索引类型
+1. 使用索引 `use index`：`select * from 表 use index(索引) where name=""`
+2. 忽略索引 `ignore index`：`select * from 表 ignore index(索引) where name=""
+3. 强制索引 `force index`：`select * from 表 force index(索引) where name=""
 # 优化
 1. 查看数据库**SQL的执行频率**`show global status like 'Com_______'`
 2. **慢查询日志**：
