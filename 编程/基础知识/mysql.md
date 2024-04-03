@@ -195,4 +195,13 @@ Create Table table_Name
 >2.  连接类型(type) ：性能由好到坏NULL,system,const(*主键或唯一索引*),eq_ref,ref（*非唯一索引*）,range,index,all（*全表扫描*）
 >3. possible_keys，key，key_len : `possible_key` 预计使用的索引，`key` 使用的索引，`key_len` 索引的长度
 
-	
+
+# 大批量数据
+大批量数据插入：插入100w条
+通过`load` 载入数据
+
+1. 客户端连接服务端时，加上参数 --local-infile
+`mysql --local-infile -u root -p`
+2. 设置全局参数local_infile 为1，开启从本地加载文件导入数据的开关
+`set global local_infile=1`
+3. 执行load插入，
