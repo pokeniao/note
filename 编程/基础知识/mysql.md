@@ -162,7 +162,7 @@ Create Table table_Name
 
 
 
-# 索引
+# [[mysql底层进阶#索引|索引]]
 1. 创建索引
 `Create [unique|fulltext] index 索引名 on 表（索引字段,...）`
 >*unique*：是唯一索引
@@ -171,9 +171,7 @@ Create Table table_Name
 >如果关联了单个字段为==单列索引==，关联了多个字段为==联合索引==
 2. 查看索引 `Show index from 表`
 3. 删除索引 `drop index 索引名 on 表名`
-
-索引[[mysql底层进阶#索引]]
-
+4. 前缀索引
 ## SQL提示
 SQL提示是优化数据库的重要手段。用于提示Mysql使用的索引类型
 1. 使用索引 `use index`：`select * from 表 use index(索引) where name=""`
