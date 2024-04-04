@@ -204,4 +204,8 @@ Create Table table_Name
 `mysql --local-infile -u root -p`
 2. 设置全局参数local_infile 为1，开启从本地加载文件导入数据的开关
 `set global local_infile=1`
-3. 执行load插入，
+3. 执行load插入，将准备好的数据插入到MySQL.
+`load data local infile "数据地址.sql" into table 表 fields terminated by ',' lines terminated by '\n'`
+
+数据用`,`分割`\n`换行
+![[Pasted image 20240403200616.png]]
